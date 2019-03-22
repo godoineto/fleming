@@ -1,4 +1,4 @@
-# Fleming - Sistema de Gestão Hospitalar
+# Fleming API - Serviço de Gestão Hospitalar
 > O objetivo do projeto é criar uma API para organizar um sistema público de saúde.
 
 
