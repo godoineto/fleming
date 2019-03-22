@@ -37,7 +37,6 @@
 # auto-import.
 # .idea/modules.xml
 # .idea/*.iml
-gradle/wrapper/gradle-wrapper.jar
 
 # CMake
 cmake-build-*/
