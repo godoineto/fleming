@@ -59,3 +59,15 @@ Cadastrar e gerenciar banco de sangue.
 > GET: /v1/hospitais/{id}/pacientes/{paciente}
 
 > [{ id: "integer", nome: "string", cpf: "string", nascimento: "date", sexo: "string", dataEntrada: "date" }]
+
+
+### Getting Started
+
+Os guias a seguir mostram como usar algumas ferramentas corretamente:
+
+* [Acessando dados com MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
+* [Acessando dados com JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+* [Construindo um RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+* [Fornecendo Web Content com Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Construindo REST services com Spring](https://spring.io/guides/tutorials/bookmarks/)
+
