@@ -17,7 +17,6 @@
 .idea/**/contentModel.xml
 .idea/misc.xml
 .idea/vcs.xml
-/home/neto/workspace/fleming-api/gradle/wrapper/gradle-wrapper.jar
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -38,7 +37,7 @@
 # auto-import.
 # .idea/modules.xml
 # .idea/*.iml
-gradle/**/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.jar
 
 # CMake
 cmake-build-*/
