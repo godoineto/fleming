@@ -2,6 +2,7 @@ package com.codenation.squad5.flemingapi.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.codenation.squad5.flemingapi.http.json.HospitalResponse;
+import com.codenation.squad5.flemingapi.http.json.mapper.HospitalMapper;
 import com.codenation.squad5.flemingapi.model.Hospital;
 import com.codenation.squad5.flemingapi.service.HospitalService;
 
@@ -28,8 +31,15 @@ import io.swagger.annotations.ApiResponses;
 @Api(value = "hospitais", produces = MediaType.APPLICATION_JSON_VALUE)
 public class HospitalController{
 	
-	@Autowired
+	private HospitalMapper mapper;	
 	private HospitalService hospitalService;
+	
+	@Autowired
+	public HospitalController(HospitalService hospitalService,@Qualifier("hospitalMapper")HospitalMapper mapper) {
+		this.hospitalService = hospitalService;
+		this.mapper = mapper;
+	}
+
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
 	
@@ -39,8 +49,8 @@ public class HospitalController{
 			@ApiResponse(code = 422, message = "Validation error"),
 			@ApiResponse(code = 500, message = "Internal Server Error")})
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Hospital> listarHospitais(){
-		return hospitalService.listAll();
+	public List<HospitalResponse> listarHospitais(){
+		return hospitalService.listAll().stream().map(hospital -> mapper.mapToResponse(hospital)).collect(Collectors.toList());
 	}
 	
 	@ApiOperation(value = "cadastra hospital")
@@ -49,8 +59,8 @@ public class HospitalController{
 			@ApiResponse(code = 422, message = "Validation error"),
 			@ApiResponse(code = 500, message = "Internal Server Error")})
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Hospital> salvarHospital(@RequestBody Hospital client) {
-		Hospital saved = hospitalService.save(client);
+	public ResponseEntity<Hospital> salvarHospital(@RequestBody Hospital hospital) {
+		Hospital saved = hospitalService.save(hospital);
 		return  ResponseEntity.ok().body(saved);
 	}
 	
