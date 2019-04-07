@@ -1,5 +1,6 @@
 package com.codenation.squad5.flemingapi.api.hospitais.model;
 
+import com.codenation.squad5.flemingapi.api.common.model.Endereco;
 import com.codenation.squad5.flemingapi.api.leitos.model.Leito;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,7 +19,7 @@ public class Hospital {
 	
 	private String nome;
 	
-//	private Endereco endereco;
+	private Endereco endereco;
 
 	private List<Leito> leitos;
 
@@ -41,13 +42,13 @@ public class Hospital {
 		this.nome = nome;
 	}
 
-//	public Endereco getEndereco() {
-//		return endereco;
-//	}
-//
-//	public void setEndereco(Endereco endereco) {
-//		this.endereco = endereco;
-//	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 
 	public List<Leito> getLeitos() {
 		return leitos;
