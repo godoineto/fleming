@@ -1,4 +1,4 @@
-package com.codenation.squad5.flemingapi.api.hospitais.model;
+package com.codenation.squad5.flemingapi.api.leitos.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
