@@ -1,7 +1,7 @@
 package com.codenation.squad5.flemingapi.api.hospitais.dto;
 
 import com.codenation.squad5.flemingapi.api.common.model.Endereco;
-import com.codenation.squad5.flemingapi.api.hospitais.model.Leito;
+import com.codenation.squad5.flemingapi.api.leitos.model.Leito;
 
 import java.util.ArrayList;
 import java.util.List;
