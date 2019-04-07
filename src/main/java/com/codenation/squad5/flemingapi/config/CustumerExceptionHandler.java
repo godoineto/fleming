@@ -1,6 +1,7 @@
-package com.codenation.squad5.flemingapi.controller;
+package com.codenation.squad5.flemingapi.config;
 
 
+import com.codenation.squad5.flemingapi.config.exception.ResponseError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -9,8 +10,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
-import com.codenation.squad5.flemingapi.config.exception.ResponseError;
 
 @ControllerAdvice
 public class CustumerExceptionHandler {

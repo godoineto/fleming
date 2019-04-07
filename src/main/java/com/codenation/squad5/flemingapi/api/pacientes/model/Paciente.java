@@ -1,8 +1,8 @@
-package com.codenation.squad5.flemingapi.model;
+package com.codenation.squad5.flemingapi.api.pacientes.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
+import com.codenation.squad5.flemingapi.api.common.model.Endereco;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "paciente")
 @JsonInclude(JsonInclude.Include.NON_NULL)
