@@ -55,8 +55,8 @@ public class HospitalController {
 			@ApiResponse(code = 422, message = "Validation error"),
 			@ApiResponse(code = 500, message = "Internal Server Error")})
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<HospitalDTO> salvarHospital(@RequestBody Hospital hospital) {
-		Hospital saved = hospitalService.save(hospital);
+	public ResponseEntity<HospitalDTO> salvarHospital(@RequestBody HospitalDTO hospital) {
+		Hospital saved = hospitalService.save(mapper.map(hospital, Hospital.class));
 		return  ResponseEntity.ok().body(mapper.map(saved, HospitalDTO.class));
 	}
 }

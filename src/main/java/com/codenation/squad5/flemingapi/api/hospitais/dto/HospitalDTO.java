@@ -1,7 +1,7 @@
 package com.codenation.squad5.flemingapi.api.hospitais.dto;
 
-import com.codenation.squad5.flemingapi.api.common.model.Endereco;
-import com.codenation.squad5.flemingapi.api.leitos.model.Leito;
+import com.codenation.squad5.flemingapi.api.common.dto.EnderecoDTO;
+import com.codenation.squad5.flemingapi.api.leitos.dto.LeitoDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,9 @@ public class HospitalDTO {
 
     private String nome;
 
-    private Endereco endereco;
+    private EnderecoDTO endereco;
 
-    private List<Leito> leitos;
+    private List<LeitoDTO> leitos;
 
     public HospitalDTO() {
         leitos = new ArrayList<>();
@@ -36,19 +36,19 @@ public class HospitalDTO {
         this.nome = nome;
     }
 
-    public Endereco getEndereco() {
+    public EnderecoDTO getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(EnderecoDTO endereco) {
         this.endereco = endereco;
     }
 
-    public List<Leito> getLeitos() {
+    public List<LeitoDTO> getLeitos() {
         return leitos;
     }
 
-    public void setLeitos(List<Leito> leitos) {
+    public void setLeitos(List<LeitoDTO> leitos) {
         this.leitos = leitos;
     }
 }

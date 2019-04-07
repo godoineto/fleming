@@ -1,23 +1,9 @@
 package com.codenation.squad5.flemingapi.api.leitos.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "leito")
 public class Leito {
 
-    @Id
-    private String id;
     private int numero;
     private boolean ocupado;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public int getNumero() {
         return numero;
