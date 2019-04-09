@@ -6,6 +6,7 @@ import com.codenation.squad5.flemingapi.api.hospitais.dto.HospitalDTO;
 import com.codenation.squad5.flemingapi.api.hospitais.model.Hospital;
 import com.codenation.squad5.flemingapi.api.leitos.model.Leito;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class HospitalServiceImplTest {
-    @Autowired
+
+   @Autowired
    private HospitalController hospitalController;
 
     private HospitalDTO hospitalDto = new HospitalDTO();
@@ -28,13 +30,12 @@ public class HospitalServiceImplTest {
 
     @Test
     public void shouldMapHospitalToDto(){
-        Hospital hospital;
-        hospital = this.setUpHospital();
+        Hospital hospital = this.setUpHospital();
         hospital.setEndereco(this.setUpEndereco());
         hospital.setLeitos(this.setUpLeitos());
 
         hospitalDto = modelMapper.map(hospital, HospitalDTO.class);
-        assertEquals( hospitalDto.getId(),"012");
+        assertEquals( hospitalDto.getId(), hospital.getId());
     }
 
     @Test
@@ -50,8 +51,7 @@ public class HospitalServiceImplTest {
 
     @Test
     public void quandoHospitalNaoPossuiEndereco(){
-        Hospital hospital;
-        hospital = this.setUpHospital();
+        Hospital hospital = this.setUpHospital();
         hospital.setLeitos(this.setUpLeitos());
 
         assertNull(hospital.getEndereco());
@@ -65,8 +65,7 @@ public class HospitalServiceImplTest {
 
     @Test
     public void quandoHospitalNaoPossuiQualquerLeitos(){
-        Hospital hospital;
-        hospital = this.setUpHospital();
+        Hospital hospital = this.setUpHospital();
         hospital.setEndereco(this.setUpEndereco());
 
         assertEquals(hospital.getLeitos().size(), 0);
