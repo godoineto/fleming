@@ -1,13 +1,17 @@
 package com.codenation.squad5.flemingapi.api.pacientes.model;
 
 import com.codenation.squad5.flemingapi.api.common.model.Endereco;
+import com.codenation.squad5.flemingapi.api.hospitais.model.Hospital;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "paciente")
+@Document()
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Paciente {
-	
+
+	@Id
 	private String idPaciente;	
 
 	private String nome;
@@ -21,6 +25,9 @@ public class Paciente {
 	private String telefone;
 	
 	private Endereco endereco;
+
+	@DBRef
+	private Hospital hospital;
 
 	public String getIdPaciente() {
 		return idPaciente;
@@ -78,4 +85,11 @@ public class Paciente {
 		this.endereco = endereco;
 	}
 
+	public Hospital getHospital() {
+		return hospital;
+	}
+
+	public void setHospital(Hospital hospital) {
+		this.hospital = hospital;
+	}
 }
