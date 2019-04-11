@@ -1,5 +1,6 @@
 package com.codenation.squad5.flemingapi.api.pacientes;
 
+<<<<<<< HEAD
 import com.codenation.squad5.flemingapi.api.hospitais.service.HospitalService;
 import com.codenation.squad5.flemingapi.api.pacientes.dto.PacienteDTO;
 import com.codenation.squad5.flemingapi.api.pacientes.model.Paciente;
@@ -23,10 +24,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.lang.reflect.Type;
 import java.util.List;
 
+=======
+import io.swagger.annotations.Api;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+>>>>>>> 957ef08d967bb0881e4e5c0f701e3de9b19472a1
 @RestController
 @RequestMapping("hospitais/{id}/pacientes")
 @Api(value = "pacientes", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PacienteController {
+<<<<<<< HEAD
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -61,3 +70,6 @@ public class PacienteController {
     }
 }
 
+=======
+}
+>>>>>>> 957ef08d967bb0881e4e5c0f701e3de9b19472a1

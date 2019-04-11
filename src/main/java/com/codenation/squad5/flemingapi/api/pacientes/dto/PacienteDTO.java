@@ -1,5 +1,6 @@
 package com.codenation.squad5.flemingapi.api.pacientes.dto;
 
+<<<<<<< HEAD
 
 import com.codenation.squad5.flemingapi.api.common.model.Endereco;
 
@@ -77,4 +78,7 @@ public class PacienteDTO {
         this.endereco = endereco;
     }
 
+=======
+public class PacienteDTO {
+>>>>>>> 957ef08d967bb0881e4e5c0f701e3de9b19472a1
 }

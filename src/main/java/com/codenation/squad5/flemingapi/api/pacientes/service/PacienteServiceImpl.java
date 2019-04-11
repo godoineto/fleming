@@ -1,5 +1,6 @@
 package com.codenation.squad5.flemingapi.api.pacientes.service;
 
+<<<<<<< HEAD
 
 import com.codenation.squad5.flemingapi.api.pacientes.model.Paciente;
 import org.slf4j.Logger;
@@ -34,4 +35,7 @@ public class PacienteServiceImpl implements PacienteService {
         return false;
     }
 
+=======
+public class PacienteServiceImpl implements PacienteService {
+>>>>>>> 957ef08d967bb0881e4e5c0f701e3de9b19472a1
 }

@@ -1,9 +1,14 @@
 package com.codenation.squad5.flemingapi.api.pacientes.model;
+<<<<<<< HEAD:src/main/java/com/codenation/squad5/flemingapi/api/pacientes/model/Paciente.java
 
 import com.codenation.squad5.flemingapi.api.common.model.Endereco;
 import org.springframework.data.mongodb.core.mapping.Document;
+=======
+>>>>>>> 957ef08d967bb0881e4e5c0f701e3de9b19472a1:src/main/java/com/codenation/squad5/flemingapi/api/pacientes/model/Paciente.java
 
+import com.codenation.squad5.flemingapi.api.common.model.Endereco;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "paciente")
 @JsonInclude(JsonInclude.Include.NON_NULL)
